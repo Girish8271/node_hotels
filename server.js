@@ -10,11 +10,11 @@ const studentRoute = require("./routes/studentsRoutes");
 // Initialize the app
 const app = express();
 const PORT = process.env.PORT || 3000;
-const FrontendUrl = process.env.FRONTEND_URL || "http://localhost:5173";
+const FrontendUrl = process.env.FRONTEND_URL;
 
 // Middleware
 app.use(cors({
-  origin: [`${FrontendUrl}`, 'http://localhost:3000'],
+  origin: [`${FrontendUrl}`, 'http://localhost:3000', 'http://localhost:5173'],
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   allowedHeaders: ['Content-Type', 'Authorization'],
   credentials: true
