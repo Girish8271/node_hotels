@@ -10,7 +10,7 @@ const studentRoute = require("./routes/studentsRoutes");
 // Initialize the app
 const app = express();
 const PORT = process.env.PORT || 3000;
-const FrontendUrl = process.env.FRONTEND_URL;
+const FrontendUrl = process.env.FRONTEND_URL || http://localhost:5173;
 
 // Middleware
 app.use(cors({
